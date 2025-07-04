@@ -1,0 +1,6 @@
+CREATE TABLE Token(
+    id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
+    token VARCHAR(255) UNIQUE NOT NULL,
+    FOREIGN KEY(user_id) REFERENCES Users(id)
+)
