@@ -1,7 +1,9 @@
-const express=require('express');
-const {getWorkersList}=require('../controllers/workerController');
-const router=express.Router();
+const express = require('express');
+const { getWorkersList, pendingApprovals, workerApproval } = require('../controllers/workerController');
+const router = express.Router();
 
-router.get('/workerlist',getWorkersList)
+router.get('/workerlist', getWorkersList)
+router.get('/pendingapprovals', pendingApprovals);
+router.post('/workerapproval', workerApproval);
 
-module.exports=router;
+module.exports = router;

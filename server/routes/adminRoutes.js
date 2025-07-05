@@ -1,7 +1,8 @@
-const express=require('express');
-const {pendingApprovals}=require('../controllers/adminController');
-const router=express.Router();
+const express = require('express');
+const { pendingApprovals, adminApproval } = require('../controllers/adminController');
+const router = express.Router();
 
-router.get('/pendindapprovals',pendingApprovals)
+router.get('/pendingapprovals', pendingApprovals);
+router.post('/adminapproval', adminApproval);
 
-module.exports=router;
+module.exports = router;
